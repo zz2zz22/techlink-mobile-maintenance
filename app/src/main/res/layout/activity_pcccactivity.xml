@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PCCCActivity">
+
+    <ImageView
+        android:id="@+id/logoImage_PcccActivity"
+        android:layout_width="260dp"
+        android:layout_height="65dp"
+        android:background="@drawable/logo"
+        android:layout_marginTop="10dp" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/logoImage_PcccActivity"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider">
+
+        <TextView
+            android:id="@+id/lbPickType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:text="Chọn loại bảo trì:" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pickTypeLayout"
+            android:layout_below="@id/lbPickType"
+            android:layout_marginTop="15dp"
+            android:layout_centerVertical="true">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/lbTypeIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Hoàn tất bảo trì/ Nhập mới"/>
+                <TextView
+                    android:id="@+id/lbTypeOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/lbTypeIn"
+                    android:layout_marginLeft="10dp"
+                    android:text="Bảo trì/ Thay thế"/>
+            </RelativeLayout>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbtnTypeIn"
+                    android:checked="true"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rbtnTypeIn"
+                    android:id="@+id/rbtnTypeOut"
+                    android:checked="false"/>
+            </RadioGroup>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/lbRemarkInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/pickTypeLayout"
+            android:layout_marginLeft="10dp"
+            android:text="Ghi chú:" />
+
+        <EditText
+            android:id="@+id/editTextRemark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@id/lbRemarkInput"
+            android:inputType="textPersonName"
+            android:hint="Nhập ghi chú (nếu có)" />
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btnSaveScan"
+            android:layout_below="@id/editTextRemark"
+            android:layout_centerHorizontal="true"
+            android:text="SCAN &amp; SAVE"/>
+
+    </RelativeLayout>
+</RelativeLayout>

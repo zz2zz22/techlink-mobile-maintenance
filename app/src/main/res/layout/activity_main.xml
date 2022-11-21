@@ -4,13 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/mainLayout">
 
-    <Button
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="65dp"
+        android:id="@+id/logoImage"
+        android:background="@drawable/logo"
+        android:layout_marginTop="15dp"
+
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/logoImage"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scan"
-        android:layout_centerInParent="true"
-        android:id="@+id/btn_pcccScan"/>
+        android:layout_below="@id/divider">
+
+        <ImageButton
+            android:id="@+id/scanPCCC"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/pccc" />
+
+        <ImageButton
+            android:id="@+id/scanUniform"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/uniform" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
