@@ -79,7 +79,7 @@ public class PCCC_Scan extends AppCompatActivity {
                 uuid = UUIDGenerator.getAscId();
                 simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                 datetime = simpleDateFormat.format(Calendar.getInstance().getTime()).toString();
-                String query = "Insert into Test (uuid, barcode, maintenance_type, remark,  update_date) values ('"+uuid+"', '"+ result.trim() +"', '"+ type +"', '"+remark+"', '"+datetime+"')";
+                String query = "Insert into PCCC_Record (uuid, barcode, maintenance_type, remark,  update_date) values ('"+uuid+"', '"+ result.trim() +"', '"+ type +"', '"+remark+"', '"+datetime+"')";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
             }else {

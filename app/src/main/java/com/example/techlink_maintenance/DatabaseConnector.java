@@ -14,7 +14,7 @@ public class DatabaseConnector {
     public Connection connectionClass()
     {
         ip = "172.16.0.12";
-        database = "VUSOFT_SUPPORT";
+        database = "DEVICES_MAINTENANCE";
         uname = "ERPUSER";
         pass = "12345";
         port = "1433";

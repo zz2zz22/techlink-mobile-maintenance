@@ -108,7 +108,7 @@
             android:id="@+id/btnSaveScan"
             android:layout_below="@id/editTextRemark"
             android:layout_centerHorizontal="true"
-            android:text="SCAN &amp; SAVE"/>
+            android:text="Quét mã để lưu"/>
 
     </RelativeLayout>
 </RelativeLayout>
